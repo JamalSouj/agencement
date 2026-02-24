@@ -61,6 +61,8 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -488,7 +490,7 @@ button {
 
 /* ============ Responsive ============ */
 /* ============ Responsive ============ */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
   .nav-links,
   .nav-cta,
@@ -507,7 +509,7 @@ button {
     top: 0;
     left: 0;
     right: 0;
-    height: 100vh;
+    height: 100dvh;
     background: var(--bg-secondary);
     justify-content: center;
     align-items: center;
