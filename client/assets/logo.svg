@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Dark brown/maroon left block (F shape) -->
+  <rect x="10" y="10" width="85" height="180" rx="4" fill="#5C3A2E"/>
+  <!-- Lime/olive green open square (A shape) -->
+  <path d="M110,10 L190,10 L190,190 L110,190 L110,130 L150,130 L150,70 L110,70 Z" fill="#B5C327" rx="4"/>
+</svg>

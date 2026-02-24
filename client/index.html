@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>France Agencement — Menuiserie Sur-Mesure au Maroc</title>
+  <meta name="description"
+    content="France Agencement, leader de la menuiserie sur-mesure et de l'agencement intérieur au Maroc depuis 2004. Usine de 6000 m² à Casablanca." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/css/main.css" />
+  <link rel="stylesheet" href="/css/hero.css" />
+  <link rel="stylesheet" href="/css/about.css" />
+  <link rel="stylesheet" href="/css/portfolio.css" />
+  <link rel="stylesheet" href="/css/contact.css" />
+  <link rel="stylesheet" href="/css/chatbot.css" />
+</head>
+
+<body>
+  <!-- Preloader -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-content">
+      <img src="/assets/logo.png" alt="France Agencement" class="preloader-logo" />
+      <div class="preloader-bar">
+        <div class="preloader-progress"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="/assets/logo.png" alt="France Agencement" class="logo-img" />
+        <span class="logo-text">France <span class="logo-accent"> Agencement</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Accueil</a></li>
+        <li><a href="#about" class="nav-link">Qui sommes-nous</a></li>
+        <li><a href="#portfolio" class="nav-link">Réalisations</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-controls">
+        <button class="lang-toggle" id="langToggle">EN</button>
+        <a href="#contact" class="nav-cta" data-i18n="nav.quote">Demander un Devis</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-slider">
+      <div class="slide"
+        style="background-image: url('https://images.unsplash.com/photo-1610505466025-533bbec9ba78?auto=format&fit=crop&q=80&w=2000')">
+      </div>
+      <div class="slide"
+        style="background-image: url('https://images.unsplash.com/photo-1540638349517-3abd5afc5847?auto=format&fit=crop&q=80&w=2000')">
+      </div>
+      <div class="slide"
+        style="background-image: url('https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=2000')">
+      </div>
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span data-i18n="hero.badge">Excellence en menuiserie depuis 2004</span>
+      </div>
+      <h1 class="hero-title reveal">
+        <span data-i18n="hero.title1">La qualité</span><br />
+        <span class="hero-title-accent" data-i18n="hero.title2">sur-mesure</span><br />
+        <span data-i18n="hero.title3">en menuiserie</span>
+      </h1>
+      <p class="hero-subtitle reveal" data-i18n="hero.subtitle">
+        Conception, fabrication et installation d'agencements intérieurs haut de gamme pour les espaces commerciaux,
+        bancaires et hôteliers.
+      </p>
+      <div class="hero-actions reveal">
+        <a href="#contact" class="btn btn-primary">
+          <span>Demander un Devis</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a href="#portfolio" class="btn btn-secondary">
+          <span>Nos Réalisations</span>
+        </a>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat">
+          <span class="stat-number" data-count="200">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Professionnels</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="6000">0</span><span class="stat-unit">m²</span>
+          <span class="stat-label">d'Atelier</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-number" data-count="20">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Ans d'Expérience</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="about.tag">Qui sommes-nous</span>
+        <h2 class="section-title"><span data-i18n="about.title1">L'excellence artisanale</span><br /><span
+            class="title-accent" data-i18n="about.title2">à l'échelle
+            industrielle</span></h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p class="about-lead">
+            Depuis <strong>2004</strong>, France Agencement est le partenaire de référence pour l'agencement intérieur
+            sur-mesure au Maroc. Notre usine de <strong>6 000 m²</strong>, située dans la Zone Industrielle du Sahel à
+            Had Soualem, allie savoir-faire artisanal et technologies de pointe.
+          </p>
+          <p>
+            Notre équipe de plus de <strong>200 professionnels</strong> — ingénieurs, menuisiers, métalliers et
+            designers — conçoit et fabrique des aménagements pour les secteurs bancaire, commercial, hôtelier et
+            industriel. Chaque projet est une réponse sur-mesure aux exigences les plus élevées.
+          </p>
+          <div class="about-features">
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                  <path d="M2 17l10 5 10-5" />
+                  <path d="M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <div>
+                <h4>Conception Intégrée</h4>
+                <p>Du design 3D à l'installation, tout est réalisé en interne.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <div>
+                <h4>Délais Maîtrisés</h4>
+                <p>Organisation logistique rigoureuse pour respecter vos échéances.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M9 12l2 2 4-4" />
+                  <circle cx="12" cy="12" r="10" />
+                </svg>
+              </div>
+              <div>
+                <h4>Qualité Certifiée</h4>
+                <p>Matériaux nobles et finitions irréprochables, conformes aux normes internationales.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-visual reveal-right">
+          <div class="about-image-grid">
+            <div class="about-img about-img-1" id="aboutImg1"></div>
+            <div class="about-img about-img-2" id="aboutImg2"></div>
+            <div class="about-img about-img-3" id="aboutImg3"></div>
+          </div>
+          <div class="about-card">
+            <span class="card-number">6000</span>
+            <span class="card-unit">m²</span>
+            <span class="card-text">d'espace de production</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Réalisations</span>
+        <h2 class="section-title">Des projets qui<br /><span class="title-accent">parlent d'eux-mêmes</span></h2>
+      </div>
+      <div class="portfolio-filters reveal-zoom" id="portfolioFilters">
+        <!-- Filters injected by JS -->
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid">
+        <!-- Projects injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <span class="section-tag">Contact</span>
+          <h2 class="section-title">Discutons de<br /><span class="title-accent">votre projet</span></h2>
+          <p class="contact-desc">
+            Vous avez un projet d'agencement ? Notre équipe est à votre écoute pour transformer vos idées en réalité.
+          </p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div>
+                <h4>Adresse</h4>
+                <p>Zone Industrielle du Sahel<br />Had Soualem, Maroc</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </div>
+              <div>
+                <h4>Téléphone</h4>
+                <p>+212 522 96 30 00</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div>
+                <h4>Email</h4>
+                <p>contact@france-agencement.ma</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-form-wrapper reveal-right delay-200">
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactName">Nom complet</label>
+                <input type="text" id="contactName" name="name" placeholder="Votre nom" required />
+              </div>
+              <div class="form-group">
+                <label for="contactEmail">Email</label>
+                <input type="email" id="contactEmail" name="email" placeholder="votre@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactPhone">Téléphone</label>
+              <input type="tel" id="contactPhone" name="phone" placeholder="+212 6XX XX XX XX" />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" placeholder="Décrivez votre projet..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">
+              <span>Envoyer le message</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 2L11 13" />
+                <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+              </svg>
+            </button>
+            <div class="form-feedback" id="formFeedback"></div>
+          </form>
+        </div>
+      </div>
+      <!-- Embedded Map -->
+      <div class="contact-map reveal-zoom delay-300">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.0!2d-7.6!3d33.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzPCsDI0JzAwLjAiTiA3wrAzNicwMC4wIlc!5e0!3m2!1sfr!2sma!4v1700000000000"
+          width="100%" height="400" style="border:0; border-radius: 16px; filter: invert(90%) hue-rotate(180deg);"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/logo.png" alt="France Agencement" class="logo-img" />
+          <span class="logo-text">France <span class="logo-accent"> Agencement</span></span>
+          <p>L'excellence en menuiserie sur-mesure depuis 2004.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#hero">Accueil</a>
+          <a href="#about">Qui sommes-nous</a>
+          <a href="#portfolio">Réalisations</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="#portfolio">Agencement Bancaire</a>
+          <a href="#portfolio">Espaces Commerciaux</a>
+          <a href="#portfolio">Hôtellerie</a>
+          <a href="#portfolio">Industriel</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 France Agencement. Tous droits réservés.</p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Portfolio Lightbox -->
+  <div class="lightbox" id="portfolioLightbox">
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Fermer">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      <div class="lightbox-info">
+        <span class="lightbox-category" id="lightboxCategory"></span>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-client" id="lightboxClient"></p>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chatbot -->
+  <div class="chatbot" id="chatbot">
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Assistant IA">
+      <svg class="chatbot-icon-open" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+      <svg class="chatbot-icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+    </button>
+    <div class="chatbot-panel" id="chatbotPanel">
+      <div class="chatbot-header">
+        <div class="chatbot-avatar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3" />
+            <path
+              d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+          </svg>
+        </div>
+        <div>
+          <h4>Assistant France Agencement</h4>
+          <span class="chatbot-status">En ligne</span>
+        </div>
+      </div>
+      <div class="chatbot-messages" id="chatbotMessages">
+        <div class="chat-message bot">
+          <p>Bonjour ! 👋 Je suis l'assistant virtuel de France Agencement. Comment puis-je vous aider ?</p>
+        </div>
+        <div class="chatbot-suggestions" id="chatbotSuggestions">
+          <button class="suggestion-btn" data-question="services">Quels sont vos services ?</button>
+          <button class="suggestion-btn" data-question="devis">Comment obtenir un devis ?</button>
+          <button class="suggestion-btn" data-question="horaires">Vos horaires d'ouverture ?</button>
+          <button class="suggestion-btn" data-question="localisation">Où êtes-vous situés ?</button>
+        </div>
+      </div>
+      <div class="chatbot-input">
+        <input type="text" id="chatbotInput" placeholder="Tapez votre message..." />
+        <button id="chatbotSend" aria-label="Envoyer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L11 13" />
+            <path d="M22 2l-7 20-4-9-9-4 20-7z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/js/i18n.js"></script>
+  <script type="module" src="/js/main.js"></script>
+  <script type="module" src="/js/portfolio.js"></script>
+  <script type="module" src="/js/contact.js"></script>
+  <script type="module" src="/js/chatbot.js"></script>
+</body>
+
+</html>
