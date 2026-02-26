@@ -71,6 +71,17 @@
     z-index: 1;
 }
 
+[data-theme="light"] .hero-bg-slider {
+    background: var(--bg-primary);
+}
+
+[data-theme="light"] .hero-bg-overlay {
+    background: linear-gradient(180deg,
+            rgba(248, 246, 240, 0.7) 0%,
+            rgba(248, 246, 240, 0.5) 40%,
+            rgba(248, 246, 240, 0.95) 100%);
+}
+
 /* Animated grain texture for the background */
 .hero-bg-slider::after {
     content: '';

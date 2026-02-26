@@ -48,6 +48,33 @@
   --radius-xl: 28px;
 }
 
+/* Light Theme Overrides */
+[data-theme="light"] {
+  --bg-primary: #f8f6f0;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #ebe6df;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fcf8f2;
+  --bg-glass: rgba(255, 255, 255, 0.85);
+
+  --accent: #a68b4e;
+  --accent-light: #c8a96e;
+  --accent-dark: #8c733b;
+  --accent-glow: rgba(166, 139, 78, 0.15);
+
+  --text-primary: #1a1a1a;
+  --text-secondary: #5a5652;
+  --text-muted: #8a8680;
+
+  --border: rgba(0, 0, 0, 0.08);
+  --border-accent: rgba(166, 139, 78, 0.2);
+}
+
+/* Invert white logo in light mode */
+[data-theme="light"] .logo-img {
+  filter: invert(100%) hue-rotate(180deg) brightness(80%);
+}
+
 /* ============ Reset ============ */
 *,
 *::before,
@@ -347,7 +374,14 @@ button {
   gap: 16px;
 }
 
-.lang-toggle {
+.lang-toggle,
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--text-secondary);
@@ -355,8 +389,30 @@ button {
   padding: 4px;
 }
 
-.lang-toggle:hover {
+.lang-toggle:hover,
+.theme-toggle:hover {
   color: var(--accent);
+}
+
+.theme-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+[data-theme="light"] .theme-toggle .sun-icon {
+  display: none;
+}
+
+[data-theme="light"] .theme-toggle .moon-icon {
+  display: block;
+}
+
+:root:not([data-theme="light"]) .theme-toggle .sun-icon {
+  display: block;
+}
+
+:root:not([data-theme="light"]) .theme-toggle .moon-icon {
+  display: none;
 }
 
 .mobile-toggle {

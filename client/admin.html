@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administration | France Agencement</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body class="admin-body">
+
+    <!-- Login View -->
+    <div id="loginView" class="admin-view active">
+        <div class="login-card">
+            <img src="/assets/logo.png" alt="Logo" class="admin-logo">
+            <h2>Espace Administrateur</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label>Nom d'utilisateur</label>
+                    <input type="text" id="usernameInput" required>
+                </div>
+                <div class="form-group">
+                    <label>Mot de passe</label>
+                    <input type="password" id="passwordInput" required>
+                </div>
+                <div id="loginError" class="error-text"></div>
+                <button type="submit" class="btn btn-primary"
+                    style="width: 100%; justify-content: center; margin-top: 10px;">Se Connecter</button>
+            </form>
+            <a href="/" class="back-link">← Retour au site</a>
+        </div>
+    </div>
+
+    <!-- Dashboard View -->
+    <div id="dashboardView" class="admin-view">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-target="projects">Projets</button>
+                <button class="nav-item" data-target="messages">Messages Contact</button>
+            </nav>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="logout-btn">Déconnexion</button>
+            </div>
+        </aside>
+
+        <main class="dashboard-main">
+            <!-- Projects Section -->
+            <section id="section-projects" class="dashboard-section active">
+                <div class="section-header-admin">
+                    <h2>Gestion des Projets</h2>
+                    <button id="addProjectBtn" class="btn btn-primary">+ Nouveau Projet</button>
+                </div>
+                <div class="table-responsive">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Image</th>
+                                <th>Titre</th>
+                                <th>Catégorie</th>
+                                <th>Client</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="projectsTableBody">
+                            <!-- Populated by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Messages Section -->
+            <section id="section-messages" class="dashboard-section">
+                <div class="section-header-admin">
+                    <h2>Messages de Contact</h2>
+                </div>
+                <div class="messages-grid" id="messagesGrid">
+                    <!-- Populated by JS -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add/Edit Project Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Nouveau Projet</h3>
+                <button class="modal-close" id="modalClose">&times;</button>
+            </div>
+            <form id="projectForm">
+                <input type="hidden" id="projectId">
+
+                <div class="form-group">
+                    <label>Titre du projet</label>
+                    <input type="text" id="projectTitle" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Catégorie</label>
+                        <select id="projectCategory" required>
+                            <!-- Populated by JS -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Client (Optionnel)</label>
+                        <input type="text" id="projectClient">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Description (Optionnel)</label>
+                    <textarea id="projectDesc"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Image du projet</label>
+                    <input type="file" id="projectImage" accept="image/*">
+                    <small>Laissez vide pour conserver l'image existante d'un projet modifié.</small>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn" id="modalCancel">Annuler</button>
+                    <button type="submit" class="btn btn-primary" id="modalSubmit">Enregistrer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="/js/admin.js"></script>
+</body>
+
+</html>
