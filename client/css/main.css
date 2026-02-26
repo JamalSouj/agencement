@@ -70,11 +70,6 @@
   --border-accent: rgba(166, 139, 78, 0.2);
 }
 
-/* Invert white logo in light mode */
-[data-theme="light"] .logo-img {
-  filter: invert(100%) hue-rotate(180deg) brightness(80%);
-}
-
 /* ============ Reset ============ */
 *,
 *::before,
