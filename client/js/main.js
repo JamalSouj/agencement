@@ -165,3 +165,16 @@ if (themeToggle) {
         localStorage.setItem('theme', newTheme);
     });
 }
+
+// ============================================
+// Interactive Ambient Background 
+// ============================================
+document.addEventListener('mousemove', (e) => {
+    const x = e.clientX / window.innerWidth;
+    const y = e.clientY / window.innerHeight;
+
+    // Update global CSS variables for the mouse position 
+    // This allows CSS radial gradients to track the cursor
+    document.body.style.setProperty('--mouse-x', `${x * 100}%`);
+    document.body.style.setProperty('--mouse-y', `${y * 100}%`);
+});
