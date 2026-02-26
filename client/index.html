@@ -39,10 +39,10 @@
         <span class="logo-text">France <span class="logo-accent"> Agencement</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="nav-link active">Accueil</a></li>
-        <li><a href="#about" class="nav-link">Qui sommes-nous</a></li>
-        <li><a href="#portfolio" class="nav-link">Réalisations</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#hero" class="nav-link active" data-i18n="nav.home">Accueil</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav.about">Qui sommes-nous</a></li>
+        <li><a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Réalisations</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
       </ul>
       <div class="nav-controls">
         <button class="lang-toggle" id="langToggle">EN</button>
@@ -84,35 +84,35 @@
       </p>
       <div class="hero-actions reveal">
         <a href="#contact" class="btn btn-primary">
-          <span>Demander un Devis</span>
+          <span data-i18n="hero.btn.quote">Demander un Devis</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7" />
           </svg>
         </a>
         <a href="#portfolio" class="btn btn-secondary">
-          <span>Nos Réalisations</span>
+          <span data-i18n="hero.btn.portfolio">Nos Réalisations</span>
         </a>
       </div>
       <div class="hero-stats reveal">
         <div class="stat">
           <span class="stat-number" data-count="200">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Professionnels</span>
+          <span class="stat-label" data-i18n="hero.stat.pro">Professionnels</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-number" data-count="6000">0</span><span class="stat-unit">m²</span>
-          <span class="stat-label">d'Atelier</span>
+          <span class="stat-label" data-i18n="hero.stat.area">d'Atelier</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-number" data-count="20">0</span><span class="stat-plus">+</span>
-          <span class="stat-label">Ans d'Expérience</span>
+          <span class="stat-label" data-i18n="hero.stat.exp">Ans d'Expérience</span>
         </div>
       </div>
     </div>
     <div class="scroll-indicator">
       <div class="scroll-line"></div>
-      <span>Défiler</span>
+      <span data-i18n="scroll.indicator">Défiler</span>
     </div>
   </section>
 
@@ -127,12 +127,12 @@
       </div>
       <div class="about-grid">
         <div class="about-text reveal-left">
-          <p class="about-lead">
+          <p class="about-lead" data-i18n="about.p1">
             Depuis <strong>2004</strong>, France Agencement est le partenaire de référence pour l'agencement intérieur
             sur-mesure au Maroc. Notre usine de <strong>6 000 m²</strong>, située dans la Zone Industrielle du Sahel à
             Had Soualem, allie savoir-faire artisanal et technologies de pointe.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Notre équipe de plus de <strong>200 professionnels</strong> — ingénieurs, menuisiers, métalliers et
             designers — conçoit et fabrique des aménagements pour les secteurs bancaire, commercial, hôtelier et
             industriel. Chaque projet est une réponse sur-mesure aux exigences les plus élevées.
@@ -147,8 +147,8 @@
                 </svg>
               </div>
               <div>
-                <h4>Conception Intégrée</h4>
-                <p>Du design 3D à l'installation, tout est réalisé en interne.</p>
+                <h4 data-i18n="about.feat1.title">Conception Intégrée</h4>
+                <p data-i18n="about.feat1.desc">Du design 3D à l'installation, tout est réalisé en interne.</p>
               </div>
             </div>
             <div class="feature">
@@ -159,8 +159,8 @@
                 </svg>
               </div>
               <div>
-                <h4>Délais Maîtrisés</h4>
-                <p>Organisation logistique rigoureuse pour respecter vos échéances.</p>
+                <h4 data-i18n="about.feat2.title">Délais Maîtrisés</h4>
+                <p data-i18n="about.feat2.desc">Organisation logistique rigoureuse pour respecter vos échéances.</p>
               </div>
             </div>
             <div class="feature">
@@ -171,8 +171,9 @@
                 </svg>
               </div>
               <div>
-                <h4>Qualité Certifiée</h4>
-                <p>Matériaux nobles et finitions irréprochables, conformes aux normes internationales.</p>
+                <h4 data-i18n="about.feat3.title">Qualité Certifiée</h4>
+                <p data-i18n="about.feat3.desc">Matériaux nobles et finitions irréprochables, conformes aux normes
+                  internationales.</p>
               </div>
             </div>
           </div>
@@ -186,7 +187,7 @@
           <div class="about-card">
             <span class="card-number">6000</span>
             <span class="card-unit">m²</span>
-            <span class="card-text">d'espace de production</span>
+            <span class="card-text" data-i18n="about.card.text">d'espace de production</span>
           </div>
         </div>
       </div>
@@ -197,8 +198,9 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <div class="section-header reveal">
-        <span class="section-tag">Réalisations</span>
-        <h2 class="section-title">Des projets qui<br /><span class="title-accent">parlent d'eux-mêmes</span></h2>
+        <span class="section-tag" data-i18n="portfolio.tag">Réalisations</span>
+        <h2 class="section-title"><span data-i18n="portfolio.title1">Des projets qui</span><br /><span
+            class="title-accent" data-i18n="portfolio.title2">parlent d'eux-mêmes</span></h2>
       </div>
       <div class="portfolio-filters reveal-zoom" id="portfolioFilters">
         <!-- Filters injected by JS -->
@@ -214,9 +216,10 @@
     <div class="container">
       <div class="contact-grid">
         <div class="contact-info reveal-left">
-          <span class="section-tag">Contact</span>
-          <h2 class="section-title">Discutons de<br /><span class="title-accent">votre projet</span></h2>
-          <p class="contact-desc">
+          <span class="section-tag" data-i18n="contact.tag">Contact</span>
+          <h2 class="section-title"><span data-i18n="contact.title1">Discutons de</span><br /><span class="title-accent"
+              data-i18n="contact.title2">votre projet</span></h2>
+          <p class="contact-desc" data-i18n="contact.desc">
             Vous avez un projet d'agencement ? Notre équipe est à votre écoute pour transformer vos idées en réalité.
           </p>
           <div class="contact-details">
@@ -228,8 +231,8 @@
                 </svg>
               </div>
               <div>
-                <h4>Adresse</h4>
-                <p>Zone Industrielle du Sahel<br />Had Soualem, Maroc</p>
+                <h4 data-i18n="contact.address.title">Adresse</h4>
+                <p data-i18n="contact.address.desc">Zone Industrielle du Sahel<br />Had Soualem, Maroc</p>
               </div>
             </div>
             <div class="contact-item">
@@ -240,7 +243,7 @@
                 </svg>
               </div>
               <div>
-                <h4>Téléphone</h4>
+                <h4 data-i18n="contact.phone.title">Téléphone</h4>
                 <p>+212 522 96 30 00</p>
               </div>
             </div>
@@ -252,7 +255,7 @@
                 </svg>
               </div>
               <div>
-                <h4>Email</h4>
+                <h4 data-i18n="contact.email.title">Email</h4>
                 <p>contact@france-agencement.ma</p>
               </div>
             </div>
@@ -262,25 +265,28 @@
           <form class="contact-form" id="contactForm">
             <div class="form-row">
               <div class="form-group">
-                <label for="contactName">Nom complet</label>
-                <input type="text" id="contactName" name="name" placeholder="Votre nom" required />
+                <label for="contactName" data-i18n="form.name">Nom complet</label>
+                <input type="text" id="contactName" name="name" data-i18n-placeholder="form.name.ph"
+                  placeholder="Votre nom" required />
               </div>
               <div class="form-group">
-                <label for="contactEmail">Email</label>
-                <input type="email" id="contactEmail" name="email" placeholder="votre@email.com" required />
+                <label for="contactEmail" data-i18n="form.email">Email</label>
+                <input type="email" id="contactEmail" name="email" data-i18n-placeholder="form.email.ph"
+                  placeholder="votre@email.com" required />
               </div>
             </div>
             <div class="form-group">
-              <label for="contactPhone">Téléphone</label>
-              <input type="tel" id="contactPhone" name="phone" placeholder="+212 6XX XX XX XX" />
+              <label for="contactPhone" data-i18n="form.phone">Téléphone</label>
+              <input type="tel" id="contactPhone" name="phone" data-i18n-placeholder="form.phone.ph"
+                placeholder="+212 6XX XX XX XX" />
             </div>
             <div class="form-group">
-              <label for="contactMessage">Message</label>
-              <textarea id="contactMessage" name="message" rows="5" placeholder="Décrivez votre projet..."
-                required></textarea>
+              <label for="contactMessage" data-i18n="form.message">Message</label>
+              <textarea id="contactMessage" name="message" rows="5" data-i18n-placeholder="form.message.ph"
+                placeholder="Décrivez votre projet..." required></textarea>
             </div>
             <button type="submit" class="btn btn-primary btn-full" id="contactSubmit">
-              <span>Envoyer le message</span>
+              <span data-i18n="form.submit">Envoyer le message</span>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M22 2L11 13" />
                 <path d="M22 2l-7 20-4-9-9-4 20-7z" />
@@ -308,17 +314,17 @@
         <div class="footer-brand">
           <img src="/assets/logo.png" alt="France Agencement" class="logo-img" />
           <span class="logo-text">France <span class="logo-accent"> Agencement</span></span>
-          <p>L'excellence en menuiserie sur-mesure depuis 2004.</p>
+          <p data-i18n="footer.desc">L'excellence en menuiserie sur-mesure depuis 2004.</p>
         </div>
         <div class="footer-links">
-          <h4>Navigation</h4>
-          <a href="#hero">Accueil</a>
-          <a href="#about">Qui sommes-nous</a>
-          <a href="#portfolio">Réalisations</a>
-          <a href="#contact">Contact</a>
+          <h4 data-i18n="footer.nav">Navigation</h4>
+          <a href="#hero" data-i18n="nav.home">Accueil</a>
+          <a href="#about" data-i18n="nav.about">Qui sommes-nous</a>
+          <a href="#portfolio" data-i18n="nav.portfolio">Réalisations</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
         </div>
         <div class="footer-links">
-          <h4>Services</h4>
+          <h4 data-i18n="footer.services">Services</h4>
           <a href="#portfolio">Agencement Bancaire</a>
           <a href="#portfolio">Espaces Commerciaux</a>
           <a href="#portfolio">Hôtellerie</a>
@@ -326,7 +332,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 France Agencement. Tous droits réservés.</p>
+        <p data-i18n="footer.copy">&copy; 2024 France Agencement. Tous droits réservés.</p>
 
       </div>
     </div>
