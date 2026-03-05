@@ -1,32 +1,27 @@
-// ============================================
-// Main JS — Navigation, Scroll Animations, Counter
-// ============================================
 
-// Preloader
 window.addEventListener('load', () => {
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        // Enforce a minimum display time to show the animation (1.5s)
+
         setTimeout(() => {
             preloader.classList.add('hidden');
         }, 1500);
     }
 });
 
-// Navbar scroll behavior
 const navbar = document.getElementById('navbar');
 const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('section');
 
 window.addEventListener('scroll', () => {
-    // Navbar bg on scroll
+
     if (window.scrollY > 80) {
         navbar.classList.add('scrolled');
     } else {
         navbar.classList.remove('scrolled');
     }
 
-    // Active nav link based on scroll position
+
     let current = '';
     sections.forEach((section) => {
         const sectionTop = section.offsetTop - 200;
@@ -43,7 +38,6 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// Mobile menu toggle
 const mobileToggle = document.getElementById('mobileToggle');
 const navLinksContainer = document.getElementById('navLinks');
 
@@ -53,16 +47,13 @@ mobileToggle.addEventListener('click', () => {
     mobileToggle.setAttribute('aria-expanded', isOpen);
 });
 
-// Close mobile menu on link click
+
 navLinksContainer.querySelectorAll('.nav-link').forEach((link) => {
     link.addEventListener('click', () => {
         navLinksContainer.classList.remove('open');
     });
 });
 
-// ============================================
-// Intersection Observer — Reveal on scroll
-// ============================================
 
 const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -84,9 +75,7 @@ document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-zoom').
     revealObserver.observe(el);
 });
 
-// ============================================
-// Number Counter Animation
-// ============================================
+
 
 function animateCounters() {
     document.querySelectorAll('.stat-number[data-count]').forEach((counter) => {
@@ -110,7 +99,7 @@ function animateCounters() {
     });
 }
 
-// Observe hero stats for counter animation
+
 const statsSection = document.querySelector('.hero-stats');
 if (statsSection) {
     const statsObserver = new IntersectionObserver(
@@ -125,9 +114,6 @@ if (statsSection) {
     statsObserver.observe(statsSection);
 }
 
-// ============================================
-// Smooth scroll for anchor links
-// ============================================
 
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', (e) => {
@@ -139,14 +125,11 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     });
 });
 
-// ============================================
-// Theme Toggle Logic
-// ============================================
 
 const themeToggle = document.getElementById('themeToggle');
 const rootElement = document.documentElement;
 
-// Check local storage or system preference
+
 const savedTheme = localStorage.getItem('theme');
 const systemPrefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 
@@ -166,15 +149,67 @@ if (themeToggle) {
     });
 }
 
-// ============================================
-// Interactive Ambient Background 
-// ============================================
+
 document.addEventListener('mousemove', (e) => {
     const x = e.clientX / window.innerWidth;
     const y = e.clientY / window.innerHeight;
-
-    // Update global CSS variables for the mouse position 
-    // This allows CSS radial gradients to track the cursor
     document.body.style.setProperty('--mouse-x', `${x * 100}%`);
     document.body.style.setProperty('--mouse-y', `${y * 100}%`);
 });
+
+// Custom Cursor Initialization
+const cursor = document.getElementById('customCursor');
+const cursorFollower = document.getElementById('customCursorFollower');
+
+if (window.matchMedia('(pointer: fine)').matches && cursor && cursorFollower) {
+    let mouseX = 0, mouseY = 0;
+    let followerX = 0, followerY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // Move inner cursor instantly
+        cursor.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+    });
+
+    // Smooth follow for outer ring
+    const animateFollower = () => {
+        followerX += (mouseX - followerX) * 0.15;
+        followerY += (mouseY - followerY) * 0.15;
+        cursorFollower.style.transform = `translate(${followerX}px, ${followerY}px) translate(-50%, -50%)`;
+        requestAnimationFrame(animateFollower);
+    };
+    animateFollower();
+
+    // Hover effects on links and buttons
+    const hoverables = document.querySelectorAll('a, button, .nav-logo, input, textarea');
+    hoverables.forEach((el) => {
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+            cursorFollower.classList.add('hover');
+        });
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+            cursorFollower.classList.remove('hover');
+            el.style.transform = '';
+        });
+    });
+
+    // Magnetic Button Effect
+    const magneticBtns = document.querySelectorAll('.btn');
+    magneticBtns.forEach(btn => {
+        btn.addEventListener('mousemove', function (e) {
+            const rect = this.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            // Move the button slightly towards cursor
+            this.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+
+        btn.addEventListener('mouseleave', function () {
+            this.style.transform = '';
+        });
+    });
+}
